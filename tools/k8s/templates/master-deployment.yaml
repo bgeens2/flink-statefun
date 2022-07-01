@@ -29,6 +29,7 @@ spec:
         app: statefun
         component: master
     spec:
+      serviceAccountName: flink-statefun
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
