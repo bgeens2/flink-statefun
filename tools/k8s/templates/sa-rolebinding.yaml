@@ -34,3 +34,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: flink-statefun
+  namespace: default
