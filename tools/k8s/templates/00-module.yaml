@@ -23,3 +23,27 @@ data:
             targets:
               - example/hello
 
+apiVersion: v1
+data:
+  module.yaml: |
+    kind: io.statefun.endpoints.v2/http
+    spec:
+      functions: example/*
+      urlPathTemplate: http://functions.statefun.svc.cluster.local:8000/statefun
+      transport:
+        timeouts:
+          call: 2min
+    ---
+    kind: io.statefun.kafka.v1/ingress
+    spec:
+      id: example/in
+      address: dev-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092
+      consumerGroupId: my-group-id
+      topics:
+        - topic: names
+          valueType: example/MyMessage
+          targets:
+            - example/hello
+kind: ConfigMap
+metadata:
+  name: module-config
