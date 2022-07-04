@@ -59,6 +59,8 @@ spec:
           volumeMounts:
             - name: flink-config-volume
               mountPath: /opt/flink/conf
+            - name: module-config-volume
+              mountPath: /opt/statefun/modules/example
       volumes:
         - name: flink-config-volume
           configMap:
@@ -68,3 +70,9 @@ spec:
                 path: flink-conf.yaml
               - key: log4j-console.properties
                 path: log4j-console.properties
+        - name: module-config-volume
+          configMap:
+            name: module-config
+            items:
+              - key: module.yaml
+                path: module.yaml
