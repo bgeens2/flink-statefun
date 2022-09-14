@@ -17,8 +17,8 @@ data:
       id: example/in
       address: dev-cluster-kafka-bootstrap.kafka:9092
       consumerGroupId: statefun-ingress
-        topics:
-          - topic: topic1
-            valueType: example/MyMessage
-            targets:
-              - example/hello
+      topics:
+        - topic: topic1
+          valueType: example/MyMessage
+          targets:
+            - example/hello
