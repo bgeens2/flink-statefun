@@ -4,7 +4,7 @@ metadata:
   name: module-config
 data:
   module.yaml: |+
-    kind: io.statefun.endpoints.v2.http
+    kind: io.statefun.endpoints.v2/http
     spec:
       functions: example/*
       urlPathTemplate: http://statefunxp.default/example
