@@ -19,6 +19,6 @@ data:
       consumerGroupId: statefun-ingress
       topics:
         - topic: topic1
-          valueType: example/MyMessage
+          valueType: example/IncrementEvent
           targets:
             - example/hello
