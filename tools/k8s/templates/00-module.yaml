@@ -7,7 +7,7 @@ data:
     kind: io.statefun.endpoints.v2/http
     spec:
       functions: example/*
-      urlPathTemplate: http://statefunxp.default/v1/functions
+      urlPathTemplate: http://studio-bgeens2.default.svc.cluster.local:8080/v1/functions
       transport:
         timeouts:
           call: 2min
