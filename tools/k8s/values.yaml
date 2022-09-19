@@ -34,5 +34,5 @@ worker:
   image: statefun-application # replace with your image
   jvm_mem: 1g
   container_mem: 1.5Gi
-  replicas: 3
+  replicas: 1
 
